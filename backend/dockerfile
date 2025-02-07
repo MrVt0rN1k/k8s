@@ -1,0 +1,6 @@
+FROM golang:1.22.12-alpine3.21
+WORKDIR /backend
+COPY . .
+RUN go build -o main service.go
+EXPOSE 8080
+CMD ["./main"]
